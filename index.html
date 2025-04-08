@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grupo Secreto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Grupo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
 
-  <!-- Meta Tags pro social preview -->
-  <meta property="og:title" content="Conteúdo Secreto Liberado 🔥" />
-  <meta property="og:description" content="O que poucos têm acesso... agora tá nas suas mãos." />
-  <meta property="og:image" content="https://hotzao951.github.io/Group-previw/carrossel_text_up_1.jpg" />
-  <meta property="og:url" content="https://hotzao951.github.io/Group-previw/" />
+    .swiper {
+      width: 100%;
+      max-width: 420px;
+      height: 80vh;
+      border-radius: 20px;
+      overflow: hidden;
+    }
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
 
-  <!-- Pixel do Facebook -->
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .cta-btn {
+      background: white;
+      padding: 16px 32px;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      color: #000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 320px;
+      margin-top: 24px;
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pixel Meta -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,89 +73,33 @@
     fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=500776952773987&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=500776952773987&ev=PageView&noscript=1"/>
   </noscript>
-
-  <style>
-    body {
-      background-color: #0a0a0a;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      color: #ff0080;
-      font-size: 2em;
-    }
-
-    .swiper {
-      width: 100%;
-      max-width: 400px;
-      margin: 30px auto;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .cta-button {
-      background-color: #ff0080;
-      color: white;
-      padding: 15px 25px;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #e60073;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Você tá pronto?</h1>
-  <p>Esse conteúdo é só pra quem valoriza o que é raro.<br>
-  Role pro lado e descubra o que poucos vão ver.</p>
 
   <!-- Swiper Carrossel -->
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1" /></div>
-      <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2" /></div>
-      <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3" /></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1"></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2"></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3"></div>
     </div>
+    <!-- Pagination opcional -->
     <div class="swiper-pagination"></div>
   </div>
 
-  <!-- Botão com redirecionamento -->
-  <a href="https://t.me/+XZEowQzUD6YyNTAx" target="_blank" onclick="fbq('trackCustom', 'EntrouNoGrupo')">
-    <button class="cta-button">Entrar no Grupo Secreto</button>
+  <!-- Botão CTA -->
+  <a href="https://t.me/seuGrupo" class="cta-btn" onclick="fbq('trackCustom', 'EntrouNoGrupo');">
+    CLIQUE AQUI PARA ENTRAR
   </a>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
       loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,
       },
     });
   </script>
-
 </body>
 </html>
