@@ -1,61 +1,11 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conteúdo Exclusivo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview</title>
 
-    h1 {
-      text-align: center;
-      font-size: 26px;
-      color: #ff0080;
-      margin-top: 20px;
-    }
-
-    .swiper {
-      width: 100%;
-      max-width: 500px;
-      height: 80vh;
-      margin: 30px auto;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .cta-btn {
-      display: block;
-      width: 90%;
-      max-width: 300px;
-      margin: 20px auto;
-      padding: 18px 24px;
-      background: #ffffff;
-      color: #000000;
-      font-weight: bold;
-      font-size: 18px;
-      text-align: center;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-    }
-  </style>
-
-  <!-- Facebook Pixel -->
+  <!-- Pixel Facebook -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -68,24 +18,106 @@
     fbq('init', '500776952773987');
     fbq('track', 'PageView');
   </script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+    }
+
+    .swiper {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .slide-text {
+      position: absolute;
+      top: 30px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 0 0 10px black;
+      z-index: 10;
+      padding: 0 10px;
+    }
+
+    .cta-button {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      color: black;
+      z-index: 10;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .slide-text {
+        font-size: 16px;
+      }
+
+      .cta-button {
+        padding: 14px 24px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Ela liberou só pra quem tem coragem. Você vai encarar?</h1>
-
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1"></div>
-      <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2"></div>
-      <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3"></div>
+      <div class="swiper-slide">
+        <img src="carrossel_text_up_1.jpg" alt="Slide 1">
+        <div class="slide-text">ELA ENVIA TUDO SEM CENSURA</div>
+        <a class="cta-button" href="https://t.me/+XZEowQzUD6YyNTAx" target="_blank">CLIQUE AQUI PARA ENTRAR</a>
+      </div>
+      <div class="swiper-slide">
+        <img src="carrossel_text_up_2.jpg" alt="Slide 2">
+        <div class="slide-text">SÓ CONTEÚDO PESADO +18</div>
+        <a class="cta-button" href="https://t.me/+XZEowQzUD6YyNTAx" target="_blank">CLIQUE AQUI PARA ENTRAR</a>
+      </div>
+      <div class="swiper-slide">
+        <img src="carrossel_text_up_3.jpg" alt="Slide 3">
+        <div class="slide-text">GRUPO NOVO, ELA MOSTRA TUDO</div>
+        <a class="cta-button" href="https://t.me/+XZEowQzUD6YyNTAx" target="_blank">CLIQUE AQUI PARA ENTRAR</a>
+      </div>
     </div>
   </div>
 
-  <a href="https://t.me/+XZEowQzUD6YyNTAx" target="_blank" class="cta-btn" onclick="fbq('trackCustom', 'EntrouNoGrupo');">
-    CLIQUE AQUI PARA ENTRAR NO GRUPO SECRETO
-  </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
       loop: true,
@@ -93,8 +125,8 @@
         delay: 3000,
         disableOnInteraction: false,
       },
+      effect: 'fade'
     });
   </script>
-
 </body>
 </html>
