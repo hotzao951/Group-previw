@@ -1,94 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prévia do Grupo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Secreto</title>
+
+  <!-- Meta Tags pro social preview -->
+  <meta property="og:title" content="Conteúdo Secreto Liberado 🔥" />
+  <meta property="og:description" content="O que poucos têm acesso... agora tá nas suas mãos." />
+  <meta property="og:image" content="https://hotzao951.github.io/Group-previw/carrossel_text_up_1.jpg" />
+  <meta property="og:url" content="https://hotzao951.github.io/Group-previw/" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Pixel do Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '500776952773987');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=500776952773987&ev=PageView&noscript=1"/>
+  </noscript>
+
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
+      background-color: #0a0a0a;
+      color: white;
       font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-    .swiper {
-      width: 100vw;
-      height: 100vh;
-    }
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .swiper-slide img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-    }
-    .cta-button {
-      display: block;
-      margin: 30px auto;
-      padding: 20px 40px;
-      background-color: white;
-      color: black;
       text-align: center;
-      font-size: 20px;
-      font-weight: bold;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff0080;
+      font-size: 2em;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 400px;
+      margin: 30px auto;
+    }
+
+    .swiper-slide img {
+      width: 100%;
       border-radius: 12px;
-      text-decoration: none;
-      max-width: 300px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .cta-button {
+      background-color: #ff0080;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #e60073;
     }
   </style>
 </head>
 <body>
 
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '500776952773987');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=500776952773987&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+  <h1>Você tá pronto?</h1>
+  <p>Esse conteúdo é só pra quem valoriza o que é raro.<br>
+  Role pro lado e descubra o que poucos vão ver.</p>
 
-<!-- Swiper Carrossel -->
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1"></div>
-    <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2"></div>
-    <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3"></div>
+  <!-- Swiper Carrossel -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1" /></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2" /></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3" /></div>
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
-</div>
 
-<!-- Botão Telegram -->
-<a href="https://t.me/seuGrupo"
-   onclick="fbq('trackCustom', 'EntrouNoGrupo');"
-   class="cta-button">
-   CLIQUE AQUI PARA ENTRAR
-</a>
+  <!-- Botão com redirecionamento -->
+  <a href="https://t.me/+XZEowQzUD6YyNTAx" target="_blank" onclick="fbq('trackCustom', 'EntrouNoGrupo')">
+    <button class="cta-button">Entrar no Grupo Secreto</button>
+  </a>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-</script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
 </body>
 </html>
