@@ -1,99 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conteúdo Exclusivo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Secreto</title>
+
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #fff;
+      background-color: #0a0a0a;
+      color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 60px 20px;
+      padding: 20px;
     }
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
+
     h1 {
-      color: #ff0078;
-      margin-bottom: 20px;
+      color: #ff0080;
+      font-size: 2em;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
+
     .swiper {
       width: 100%;
-      height: auto;
-      margin-bottom: 30px;
+      max-width: 400px;
+      margin: 30px auto;
     }
+
     .swiper-slide img {
       width: 100%;
       border-radius: 12px;
     }
-    .btn {
-      display: inline-block;
-      background-color: #ff0078;
-      color: #fff;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
+
+    .cta-button {
+      background-color: #ff0080;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
       font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
       transition: 0.3s;
     }
-    .btn:hover {
-      background-color: #e6006a;
+
+    .cta-button:hover {
+      background-color: #e60073;
     }
   </style>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- Pixel do Facebook -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '500776952773987');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=500776952773987&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
-  <div class="container">
-    <h1>Você tá pronto?</h1>
-    <p>Esse conteúdo é só pra quem valoriza o que é raro.<br>
-    Role pro lado e descubra o que poucos vão ver.</p>
 
-    <!-- Swiper Carrossel -->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1"></div>
-        <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2"></div>
-        <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3"></div>
-      </div>
+  <h1>Você tá pronto?</h1>
+  <p>Esse conteúdo é só pra quem valoriza o que é raro.<br>
+  Role pro lado e descubra o que poucos vão ver.</p>
+
+  <!-- Swiper Carrossel -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1" /></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2" /></div>
+      <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3" /></div>
     </div>
-
-    <a href="https://t.me/+XZEowQzUD6YyNTAx?utm_source=fb&utm_medium=cpc&utm_campaign=grupo_preview" class="btn" onclick="fbq('trackCustom', 'EntrouNoGrupo'); fbq('track', 'ViewContent');">Entrar no Grupo Secreto</a>
+    <div class="swiper-pagination"></div>
   </div>
+
+  <button class="cta-button">Entrar no Grupo Secreto</button>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <script>
     const swiper = new Swiper('.swiper', {
       loop: true,
       autoplay: {
-        delay: 3500,
+        delay: 2500,
         disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
     });
   </script>
+
 </body>
 </html>
