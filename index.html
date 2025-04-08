@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conteúdo Exclusivo</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body {
       background-color: #0d0d0d;
@@ -16,10 +16,6 @@
     .container {
       max-width: 500px;
       margin: 0 auto;
-      background-color: #1a1a1a;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 0, 120, 0.2);
     }
     h1 {
       color: #ff0078;
@@ -29,6 +25,15 @@
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 30px;
+    }
+    .swiper {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      border-radius: 12px;
     }
     .btn {
       display: inline-block;
@@ -45,6 +50,7 @@
       background-color: #e6006a;
     }
   </style>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Pixel do Facebook -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -66,8 +72,28 @@
   <div class="container">
     <h1>Você tá pronto?</h1>
     <p>Esse conteúdo é só pra quem valoriza o que é raro.<br>
-    Clique no botão abaixo e mostre que você não é qualquer um.</p>
+    Role pro lado e descubra o que poucos vão ver.</p>
+
+    <!-- Swiper Carrossel -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="carrossel_text_up_1.jpg" alt="Preview 1"></div>
+        <div class="swiper-slide"><img src="carrossel_text_up_2.jpg" alt="Preview 2"></div>
+        <div class="swiper-slide"><img src="carrossel_text_up_3.jpg" alt="Preview 3"></div>
+      </div>
+    </div>
+
     <a href="https://t.me/+XZEowQzUD6YyNTAx?utm_source=fb&utm_medium=cpc&utm_campaign=grupo_preview" class="btn" onclick="fbq('trackCustom', 'EntrouNoGrupo'); fbq('track', 'ViewContent');">Entrar no Grupo Secreto</a>
   </div>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 </body>
 </html>
